@@ -11,6 +11,7 @@ const express = require("express");
 
 // import models so we can interact with the database
 const User = require("./models/user");
+const Survey = require("./models/survey");
 
 // import authentication library
 const auth = require("./auth");
@@ -47,5 +48,18 @@ router.all("*", (req, res) => {
   console.log(`API route not found: ${req.method} ${req.url}`);
   res.status(404).send({ msg: "API route not found" });
 });
+router.get("/usersurvey", (req, res) => {
+  //Survey.find({}).then((survey) => {
+    //I think the line above needs to also be changed to specify the survey corresponding to user id but ill figure out later
+    res.send(survey);
+  })
+})
 
+router.post("/usersurvey", (req, res) => {
+  let newSurvey = new Survey({
+    response: req.(REPLACE)
+    //request from wherever the json is idk
+  })
+  newSurvey.save();
+})
 module.exports = router;

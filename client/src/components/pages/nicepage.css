@@ -25153,6 +25153,7 @@ a.u-button-style.u-button-style.u-border-active-palette-1-dark-1.active {
 .u-separator-palette-1:after {
   border-color: #478ac9;
   stroke: #478ac9;
+
 }
 .u-button-style.u-border-palette-1 {
   border-color: #478ac9 !important;
@@ -25847,9 +25848,7 @@ a.u-button-style.u-button-style.u-border-active-palette-4-dark-3.active {
   color: #293332 !important;
   border-color: #293332 !important;
 }
-.u-link.u-border-palette-4-dark-3[class*="u-border-"] {
-  border-color: #293332 !important;
-}
+
 .u-link.u-border-palette-4-dark-3[class*="u-border-"]:hover {
   border-color: #252e2d !important;
 }
