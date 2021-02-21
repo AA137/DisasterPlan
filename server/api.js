@@ -49,7 +49,7 @@ router.all("*", (req, res) => {
   res.status(404).send({ msg: "API route not found" });
 });
 router.get("/usersurvey", (req, res) => {
-  Survey.find({}).then((survey) => {
+  //Survey.find({}).then((survey) => {
     //I think the line above needs to also be changed to specify the survey corresponding to user id but ill figure out later
     res.send(survey);
   })
