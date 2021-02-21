@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Router } from "@reach/router";
 import NotFound from "./pages/NotFound.js";
 import Skeleton from "./pages/Skeleton.js";
+import GetDisasterData from './pages/GetDisasterData.js';
 
 import "../utilities.css";
 
@@ -21,14 +22,14 @@ class App extends Component {
     };
   }
 
-  componentDidMount() {
-    get("/api/whoami").then((user) => {
-      if (user._id) {
-        // they are registed in the database, and currently logged in.
-        this.setState({ userId: user._id });
-      }
-    });
-  }
+  // componentDidMount() {
+  //   get("/api/whoami").then((user) => {
+  //     if (user._id) {
+  //       // they are registed in the database, and currently logged in.
+  //       this.setState({ userId: user._id });
+  //     }
+  //   });
+  // }
 
   handleLogin = (res) => {
     console.log(`Logged in as ${res.profileObj.name}`);
@@ -53,6 +54,9 @@ class App extends Component {
             handleLogin={this.handleLogin}
             handleLogout={this.handleLogout}
             userId={this.state.userId}
+          />
+          <GetDisasterData 
+            path="/disaster"
           />
           <NotFound default />
         </Router>
