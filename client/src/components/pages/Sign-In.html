@@ -19,6 +19,10 @@
     <meta name="theme-color" content="#478ac9">
     <link rel="canonical" href="index.html">
     <meta property="og:url" content="index.html">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="221904719683-hemk9j1nbjrbfim7b084b31be1j2q1be.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
   </head>
   <body class="u-body"><header class="u-clearfix u-header u-header" id="sec-8f37"><div class="u-clearfix u-sheet u-sheet-1">
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
@@ -50,10 +54,17 @@
         <h3 class="u-custom-font u-font-montserrat u-text u-text-custom-color-1 u-text-1">Maggi Lovers</h3>
       </div></header> 
     
-<!--Adi put your stuff here--
-here
-here
-!--Adi put your stuff here-->
+<!--Adi put your stuff here-->
+<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <script>
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+      }
+    </script>
+<!--Adi put your stuff here-->
     
     <footer class="u-align-center u-clearfix u-custom-color-1 u-footer u-footer" id="sec-7436"><div class="u-clearfix u-sheet u-sheet-1">
         <p class="u-custom-font u-font-montserrat u-small-text u-text u-text-variant u-text-1">yes</p>
