@@ -49,16 +49,14 @@ router.all("*", (req, res) => {
   res.status(404).send({ msg: "API route not found" });
 });
 router.get("/usersurvey", (req, res) => {
-  //Survey.find({}).then((survey) => {
-    //I think the line above needs to also be changed to specify the survey corresponding to user id but ill figure out later
+  Survey.find({}).then((survey) => {
     res.send(survey);
-  //})
+  })
 })
 
 router.post("/usersurvey", (req, res) => {
   let newSurvey = new Survey({
-   // response: req.(REPLACE)
-    //request from wherever the json is idk
+    response:'example.json'
   })
   newSurvey.save();
 })
