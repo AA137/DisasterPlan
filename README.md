@@ -1,4 +1,10 @@
-# EvacuAid
+# EvacuAid - Blueprint 2021
+Team: Maggi Lovers
+Members: Shruthi Ravichandran, Aditya Akula, Celestine Wenardy, Dev Chheda
+
+## Description
+Around the world, natural disasters uproot millions of lives every year. Property is damaged, lives are lost, and affected areas often do not finish recovering for years afterwards. Large scale disasters, such as Hurricane Katrina and Hurricane Maria often lead to public panic, meaning it’s necessary to have a plan in the event of a natural disaster. Our solution addresses this by giving users personalized safety information on the disasters they’re most at risk for based on their location, living situation, and medical, as well as creating quick-reference materials for users in the event of a disaster. Extensions of our project include enabling users to find the nearest pharmacy or convenience store that is supplied with items they need in the event of a disaster.
+
 
 ## Open Source code, Tools, and APIs used
 - [Survey creation](https://towardsdatascience.com/how-to-create-online-survey-for-free-with-surveyjs-and-google-sheets-d9a782d0f458)
