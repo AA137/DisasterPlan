@@ -4,35 +4,11 @@ class User extends Component {
   // makes props available in this component
   constructor(props) {
     super(props);
-    this.state = {
-        name: String,
-        googleid: String,
-        age: Number,
-        address: String,
-        english: Boolean,
-        phone: String,
-        //for formatting stuff etc. -- no reason to keep as number
-        conditions: String,
-        disabilities: String,
-        medication: String,
-        healthcare: String,
-        dietary: String,
-        allergies: String,
-        considerations: String,
-        roommates: String,
-        ages: Array,
-        //accurate???
-        pets: String,
-        car: Boolean,
-        locations: Array,
-        //is this right??
-        iscontact_name: String,
-        iscontact_phone: String,
-        iscontact_address: String,
-        ooscontact_name: String,
-        ooscontact_number: String,
-        ooscontact_address: String,
-      };
+    this.state = {name: "Tim TheBeaver", age: 107, address: "292 Main St, Cambridge, MA 02142", 
+        english: "Yes", phonenumber: "(617) 253-3400","conditions": "Beaveritis, Mascotonia", medication: ["beaveroxin"], 
+        roommates: ["Petey,0", "Kellen,0", "Stu,0"], pets: "Yes", car: true, locations: ["The Stud", "The Dome"], iscontact_name: "Crimson",
+        iscontact_phone: "(617) 495-1000", iscontact_address: "86 Brattle Street Cambridge, MA 02138", ooscontact_address:  "450 Serra Mall, Stanford, CA 94305",
+        ooscontact_name:"Tree",ooscontact_number:"(650) 723-2300"};
   }
 
   render() {
