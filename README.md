@@ -1,5 +1,6 @@
 # EvacuAid - Blueprint 2021
 Team: Maggi Lovers
+
 Members: Shruthi Ravichandran, Aditya Akula, Celestine Wenardy, Dev Chheda
 
 ## Description
