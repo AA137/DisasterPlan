@@ -52,12 +52,12 @@ router.get("/usersurvey", (req, res) => {
   //Survey.find({}).then((survey) => {
     //I think the line above needs to also be changed to specify the survey corresponding to user id but ill figure out later
     res.send(survey);
-  })
+  //})
 })
 
 router.post("/usersurvey", (req, res) => {
   let newSurvey = new Survey({
-    response: req.(REPLACE)
+   // response: req.(REPLACE)
     //request from wherever the json is idk
   })
   newSurvey.save();
