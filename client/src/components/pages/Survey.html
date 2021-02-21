@@ -53,8 +53,357 @@
     <section class="u-clearfix u-section-1" id="sec-e2cc">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-custom-color-1 u-shape u-shape-rectangle u-shape-1"></div>
-        <!--shruthi put your survey here-->
-      </div>
+        <body>
+          <!-- Button trigger modal -->
+          
+          
+            <main role="main" class="container">
+          
+            <div>
+              <p><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+              Take Survey!
+            </div>
+            
+            </main><!-- /.container -->
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div id="surveyContainer"></div>
+              </div>
+              </div>
+            </div>
+            </div>
+              <!-- Optional JavaScript -->
+              <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+            <script src="https://unpkg.com/survey-jquery@1.8.21/survey.jquery.min.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            
+            <script>
+          Survey.StylesManager.applyTheme("modern");
+          
+          
+          var surveyJSON = {
+           "pages": [
+            {
+             "name": "page1",
+             "elements": [
+              {
+               "type": "text",
+               "name": "question23",
+               "title": "First Name",
+               "isRequired": true
+              },
+              {
+               "type": "text",
+               "name": "question24",
+               "title": "Last Name",
+               "isRequired": true
+              },
+              {
+               "type": "text",
+               "name": "question22",
+               "title": "Age",
+               "isRequired": true
+              },
+              {
+               "type": "text",
+               "name": "question21",
+               "title": "Address",
+               "isRequired": true
+              },
+              {
+               "type": "radiogroup",
+               "name": "english",
+               "title": "Do you speak English?",
+               "isRequired": true,
+               "choices": [
+                {
+                 "value": "item1",
+                 "text": "Yes"
+                },
+                {
+                 "value": "item2",
+                 "text": "No"
+                }
+               ]
+              },
+              {
+               "type": "text",
+               "name": "question20",
+               "title": "Phone Number",
+               "isRequired": true
+              },
+              {
+               "type": "expression",
+               "name": "question19",
+               "title": "Medical History",
+               "hideNumber": true
+              },
+              {
+               "type": "comment",
+               "name": "question16",
+               "title": "Please list any pre-existing conditions or disabilities below (comma separate e.g. diabetes, depression)"
+              },
+              {
+               "type": "radiogroup",
+               "name": "medication",
+               "title": "Do you take medication?",
+               "isRequired": true,
+               "choices": [
+                {
+                 "value": "item1",
+                 "text": "Yes"
+                },
+                {
+                 "value": "item2",
+                 "text": "No"
+                }
+               ]
+              },
+              {
+               "type": "comment",
+               "name": "question18",
+               "visible": false,
+               "visibleIf": "{medication} = 'item1'",
+               "title": "Please list any medication and dosage (e.g. Levothyroxine, 30 mcg/day)"
+              },
+              {
+               "type": "text",
+               "name": "question17",
+               "title": "Primary Care Physician and Healthcare Insurance (separate with comma e.g. Dr. Bob Builder, Aetna; leave blank if none)"
+              },
+              {
+               "type": "checkbox",
+               "name": "question15",
+               "title": "Please check any special dietary needs",
+               "choices": [
+                {
+                 "value": "item1",
+                 "text": "Vegetarian"
+                },
+                {
+                 "value": "item2",
+                 "text": "Vegan"
+                },
+                {
+                 "value": "item3",
+                 "text": "Gluten Free"
+                },
+                {
+                 "value": "item4",
+                 "text": "Halal"
+                }
+               ],
+               "hasOther": true
+              },
+              {
+               "type": "comment",
+               "name": "question14",
+               "title": "Please list any allergies below (leave blank if none)"
+              },
+              {
+               "type": "comment",
+               "name": "question13",
+               "title": "Please list any cultural or religious considerations (leave blank if none)"
+              },
+              {
+               "type": "expression",
+               "name": "question12",
+               "title": "Living Situation",
+               "hideNumber": true
+              },
+              {
+               "type": "radiogroup",
+               "name": "live",
+               "title": "Do you live alone?",
+               "isRequired": true,
+               "choices": [
+                {
+                 "value": "item1",
+                 "text": "Yes"
+                },
+                {
+                 "value": "item2",
+                 "text": "No"
+                }
+               ]
+              },
+              {
+               "type": "multipletext",
+               "name": "question4",
+               "visible": false,
+               "visibleIf": "{live} = 'item2'",
+               "title": "Names of others in your household and their age (comma separated e.g. John, 9)",
+               "description": "(enter N/A if you've finished entering)",
+               "items": [
+                {
+                 "name": "text1",
+                 "title": "Name 1"
+                },
+                {
+                 "name": "text2",
+                 "title": "Name 2"
+                },
+                {
+                 "name": "text3",
+                 "title": "Name 3"
+                },
+                {
+                 "name": "text4",
+                 "title": "Name 4"
+                },
+                {
+                 "name": "text5",
+                 "title": "Name 5"
+                }
+               ]
+              },
+              {
+               "type": "radiogroup",
+               "name": "pet",
+               "title": "Does someone in your household have a pet?",
+               "isRequired": true,
+               "choices": [
+                {
+                 "value": "item1",
+                 "text": "Yes"
+                },
+                {
+                 "value": "item2",
+                 "text": "No"
+                }
+               ]
+              },
+              {
+               "type": "radiogroup",
+               "name": "question11",
+               "visibleIf": "{pet} = 'item1'",
+               "title": "Is it a service animal?",
+               "enableIf": "{pet} = 'item1'",
+               "choices": [
+                {
+                 "value": "item1",
+                 "text": "Yes"
+                },
+                {
+                 "value": "item2",
+                 "text": "No"
+                }
+               ]
+              },
+              {
+               "type": "radiogroup",
+               "name": "question9",
+               "title": "Does someone in your household have a car?",
+               "isRequired": true,
+               "choices": [
+                {
+                 "value": "item1",
+                 "text": "Yes"
+                },
+                {
+                 "value": "item2",
+                 "text": "No"
+                }
+               ]
+              },
+              {
+               "type": "multipletext",
+               "name": "question10",
+               "title": "List two locations you frequently visit",
+               "items": [
+                {
+                 "name": "text1",
+                 "title": "Location 1"
+                },
+                {
+                 "name": "text2",
+                 "title": "Location 2"
+                }
+               ]
+              },
+              {
+               "type": "expression",
+               "name": "question8",
+               "title": "Emergency Contact Information",
+               "hideNumber": true
+              },
+              {
+               "type": "text",
+               "name": "question7",
+               "title": "In-State Emergency Contact Name"
+              },
+              {
+               "type": "text",
+               "name": "question6",
+               "title": "In-State Emergency Contact Phone Number"
+              },
+              {
+               "type": "text",
+               "name": "question5",
+               "title": "In-State Emergency Contact Address"
+              },
+              {
+               "type": "text",
+               "name": "question3",
+               "title": "Out-of-State Emergency Contact Name"
+              },
+              {
+               "type": "text",
+               "name": "question2",
+               "title": "Out-of-State Emergency Contact Phone Number"
+              },
+              {
+               "type": "text",
+               "name": "question1",
+               "title": "Out-of-state Emergency Contact Address"
+              }
+             ],
+            }
+           ]
+          };
+          
+          function sendDataToServer(survey, options) {
+            //Display information about sending data
+            options.showDataSaving();
+            $.ajax({
+              url: 'https://script.google.com/macros/s/AKfycby_XZaWjAb7DMbtXdOsEsPiwS3lM4NkLPhi5f3D1fdhCatn5sOQ0r2v/exec',
+              type: 'post',
+              data: JSON.stringify(survey.data),
+              //We need tell web app that we use plain text.
+              headers: {
+                "Content-Type": "text/plain"
+              },
+              processData: false,
+              complete: function(res, status) {
+                if (status == 'success') {
+                  //Show that data was send successfully
+                  options.showDataSavingSuccess();
+                }else {
+                  //Display retry button in case of error
+                  options.showDataSavingError();
+                }
+              },
+            });
+          }
+          
+          var survey = new Survey.Model(surveyJSON);
+          $("#surveyContainer").Survey({
+              model: survey,
+            onComplete: sendDataToServer
+          });
+            </script>
+            </body>      </div>
     </section>
     
     
